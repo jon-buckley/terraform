@@ -1,7 +1,7 @@
-module "compute" {
-  source  = "Azure/compute/azurerm"
-  version = "1.1.5"
-}
+// module "compute" {
+//   source  = "Azure/compute/azurerm"
+//   version = "1.1.5"
+// }
 
 module "linuxservers" {
   source                        = "Azure/compute/azurerm"
@@ -41,10 +41,11 @@ module "windowsservers" {
   vm_os_offer         = "WindowsServer"
   vm_os_sku           = "2012-R2-Datacenter"
   vm_size             = "Standard_DS2_V2"
-  vnet_subnet_id      = "${module.network.vnet_subnets[0]}"
+  vnet_subnet_id      = "${module.network_servers.vnet_subnets[0]}"
 }
 
-module "network" {
+# I changed this as you had network module in Compute as well
+module "network_servers" {
   source              = "Azure/network/azurerm"
   version             = "~> 1.1.1"
   location            = "westeurope"

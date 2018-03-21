@@ -1,4 +1,4 @@
-module "linuxservers" {
+module "linux_compute" {
   source         = "Azure/compute/azurerm"
   location       = "westeurope"
   vm_os_simple   = "UbuntuServer"
@@ -6,7 +6,7 @@ module "linuxservers" {
   vnet_subnet_id = "${module.network.vnet_subnets[0]}"
 }
 
-module "windowsservers" {
+module "windows_compute" {
   source         = "Azure/compute/azurerm"
   location       = "westeurope"
   vm_hostname    = "mywinvm"                           // line can be removed if only one VM module per resource group
@@ -25,10 +25,11 @@ module "network" {
   resource_group_name = "terraform-compute"
 }
 
-output "linux_vm_public_name" {
-  value = "${module.linuxservers.public_ip_dns_name}"
+# This has to be unique as well, the output names.
+output "linux_compute_vm_public_name" {
+  value = "${module.linux_compute.public_ip_dns_name}"
 }
 
-output "windows_vm_public_name" {
-  value = "${module.windowsservers.public_ip_dns_name}"
+output "windows_compute_vm_public_name" {
+  value = "${module.windows_compute.public_ip_dns_name}"
 }
