@@ -68,9 +68,9 @@ resource "azurerm_virtual_machine_extension" "domainjoinssas" {
 
   settings = <<SETTINGS
     {
-        "Name": "finaltadev.onmicrosoft.com",
+        "Name": "testdomain.onmicrosoft.com",
         "OUPath": "",
-        "User": "finaltadev\\domainadmin",
+        "User": "testdomain\\domainadmin",
         "Restart": "true",
         "Options": "3"
     }
@@ -78,7 +78,7 @@ SETTINGS
 
   protected_settings = <<PROTECTED_SETTINGS
     {
-        "Password": "Sorcerer778*"
+        "Password": "insertpassword*"
     }
 PROTECTED_SETTINGS
 }
@@ -172,9 +172,9 @@ resource "azurerm_virtual_machine" "ssas" {
   os_profile {
     computer_name = "fin-qa-ssas-vm"
 
-    admin_username = "azureuser"
+    admin_username = "azureadmin"
 
-    admin_password = "Sorcerer778*"
+    admin_password = "insertpassword*"
   }
   os_profile_windows_config {
     enable_automatic_upgrades = true
