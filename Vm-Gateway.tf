@@ -153,9 +153,9 @@ resource "azurerm_virtual_machine" "vm1" {
   os_profile {
     computer_name = "fin-qa-gate-vm"
 
-    admin_username = "azureuser"
+    admin_username = "adminuser"
 
-    admin_password = "Sorcerer778*"
+    admin_password = "insertpassword*"
   }
 
   os_profile_windows_config {
