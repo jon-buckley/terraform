@@ -7,7 +7,7 @@ variable "virtual_network_name" {
 }
 
 variable "peer_subscription_id" {
-  default = "cfafa6b3-2176-4d7b-ae4d-73764827acc9"
+  default = ""
 }
 
 variable "peer_resource_group_name" {
