@@ -12,11 +12,11 @@ resource "azurerm_key_vault" "qa" {
     name = "standard"
   }
 
-  tenant_id = "7c9cf998-b8a1-4ec3-a174-976070a2e116"
+  tenant_id = ""
 
   access_policy {
-    tenant_id = "7c9cf998-b8a1-4ec3-a174-976070a2e116"
-    object_id = "54123340-0e2e-4239-886d-32f7bf6f3a58"
+    tenant_id = ""
+    object_id = ""
 
     key_permissions = [
       "get",
