@@ -97,7 +97,7 @@ resource "azurerm_virtual_machine" "bastionvm" {
 
     ssh_keys {
       path     = "/home/azureuser/.ssh/authorized_keys"
-      key_data = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3OWefF6s90LDENUDVH14SeevAYxZF3sPv5hwwZ8sguDd3NTxIrVw26bQJy2gwWOYXMgkE8Al3Vlflm1wDE61fDuKrpbmyJ0Aj3fgVlr4s2pAOHVPgmr615WT5n6bFHD8Vvk06RY434JBA7C8duw0y9EYpvqNLtM3xX4+tdn8gMOQn3DrsO1sTpxaCqX0oBT25gAu6E7FKg9soBAhdqIwGGYQB51Duvrru9U4BZx8VbZ5CiImNg4P7LHyXPRy1VQInvSQPKk+VB+WE2VJ/i9h+8tIEsr80YRhcF7F5OFxnEZ4E+MKtcjz8jaqoGV1n55KTptUN7aY+dwdCV7cp6pT9 imported-openssh-key"
+      key_data = "ssh-rsa - imported-openssh-key"
     }
   }
 
