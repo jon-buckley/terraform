@@ -68,9 +68,9 @@ resource "azurerm_virtual_machine_extension" "domainjoingate" {
 
   settings = <<SETTINGS
     {
-        "Name": "finaltadev.onmicrosoft.com",
+        "Name": "testdomain.onmicrosoft.com",
         "OUPath": "",
-        "User": "finaltadev\\domainadmin",
+        "User": "testdomain\\domainadmin",
         "Restart": "true",
         "Options": "3"
     }
@@ -78,7 +78,7 @@ SETTINGS
 
   protected_settings = <<PROTECTED_SETTINGS
     {
-        "Password": "Sorcerer778*"
+        "Password": "insertpassword*"
     }
 PROTECTED_SETTINGS
 }
